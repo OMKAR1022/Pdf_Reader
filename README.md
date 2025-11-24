@@ -17,9 +17,9 @@ lib/
 │   ├── errors/         # Error handling
 │   └── network/        # Network utilities
 ├── features/           # Feature modules
-│   ├── splash/
-│   ├── onboarding/
-│   ├── home/
+│   ├── splash/         ✅ Animated splash screen
+│   ├── onboarding/     🔄 Coming soon
+│   ├── home/           🔄 Coming soon
 │   ├── pdf_reader/
 │   ├── pdf_creator/
 │   ├── pdf_editor/
@@ -36,6 +36,12 @@ lib/
 ```
 
 ## 🚀 Running the App
+
+### Quick Start (No Flavor)
+```bash
+flutter run
+```
+This will use the production flavor by default.
 
 ### Development Flavor
 ```bash
@@ -54,41 +60,78 @@ flutter run -t lib/main_production.dart --flavor production
 
 ## 🔧 Build Commands
 
-### Debug Build
+### Debug Build (Development)
 ```bash
 flutter build apk -t lib/main_dev.dart --flavor dev
 ```
 
-### Release Build
+### Debug Build (Staging)
+```bash
+flutter build apk -t lib/main_staging.dart --flavor staging
+```
+
+### Release Build (Production)
 ```bash
 flutter build apk -t lib/main_production.dart --flavor production --release
 ```
+
+### Build All Flavors
+```bash
+cd android && ./gradlew assembleDebug
+```
+This will create APKs for all flavors in:
+- `build/app/outputs/apk/dev/debug/app-dev-debug.apk`
+- `build/app/outputs/apk/staging/debug/app-staging-debug.apk`
+- `build/app/outputs/apk/production/debug/app-production-debug.apk`
 
 ## 📦 Dependencies
 
 - **flutter_bloc**: State management
 - **equatable**: Value equality
 - **get_it**: Dependency injection
+- **shared_preferences**: Local storage
+- **lottie**: Animations
 - **syncfusion_flutter_pdf**: PDF handling (to be added)
-- **hive**: Local storage (to be added)
+- **hive**: Local database (to be added)
 
-## 🎨 Features (Planned)
+## 🎨 Features Implemented
 
-- ✅ Project setup with flavors
-- ✅ BLoC architecture
-- ✅ Theme configuration
-- 🔄 Splash screen
-- 🔄 Onboarding
-- 🔄 PDF Reader
-- 🔄 PDF Creator
-- 🔄 PDF Editor
-- 🔄 Annotations
-- 🔄 File Management
-- 🔄 Settings
+- ✅ **Project Setup**
+  - Flutter flavors (dev, staging, production)
+  - BLoC architecture
+  - Theme configuration (light/dark)
+  
+- ✅ **Splash Screen** (Task 2.1)
+  - Animated logo with fade and scale effects
+  - Loading indicator
+  - Smart navigation (onboarding/home)
+  - Version display
+  
+- 🔄 **Onboarding** (Task 2.2 - Coming Next)
+- 🔄 **Home Screen** (Task 2.3)
+- 🔄 **PDF Reader**
+- 🔄 **PDF Creator**
+- 🔄 **PDF Editor**
+- 🔄 **Annotations**
+- 🔄 **File Management**
+- 🔄 **Settings**
 
 ## 📝 Development Progress
 
 See [implementation_plan.md](/.gemini/antigravity/brain/e6afa5ca-199d-452f-9c1f-0b7a71c60d4e/implementation_plan.md) for detailed roadmap.
+
+## 🐛 Troubleshooting
+
+### Gradle build failed error
+If you see "Gradle build failed to produce an .apk file", try:
+1. Run `flutter clean`
+2. Run `flutter pub get`
+3. Use a specific flavor: `flutter run -t lib/main_dev.dart --flavor dev`
+
+### Multiple devices
+If prompted to select a device, choose:
+- Android emulator for testing
+- Physical device for real-world testing
 
 ## 📄 License
 

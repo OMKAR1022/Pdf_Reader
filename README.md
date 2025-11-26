@@ -91,7 +91,14 @@ This will create APKs for all flavors in:
 - **get_it**: Dependency injection
 - **shared_preferences**: Local storage
 - **lottie**: Animations
-- **syncfusion_flutter_pdf**: PDF handling (to be added)
+- **syncfusion_flutter_pdfviewer**: PDF viewing
+- **pdf**: PDF generation
+- **image_picker**: Image selection from gallery/camera
+- **image_cropper**: Image cropping and rotation
+- **reorderable_grid_view**: Drag-and-drop grid
+- **path_provider**: File system paths
+- **file_picker**: File selection
+- **permission_handler**: Runtime permissions
 - **hive**: Local database (to be added)
 
 ## 🎨 Features Implemented
@@ -107,10 +114,18 @@ This will create APKs for all flavors in:
   - Smart navigation (onboarding/home)
   - Version display
   
+- ✅ **PDF Creator - Image to PDF** (Task 4.1)
+  - Multi-image selection from gallery
+  - Camera integration for single images
+  - Drag-and-drop reordering of images
+  - Image crop/rotate functionality
+  - PDF generation from images
+  - Beautiful preview grid with page numbers
+  - Empty state and success dialogs
+  
 - 🔄 **Onboarding** (Task 2.2 - Coming Next)
 - 🔄 **Home Screen** (Task 2.3)
 - 🔄 **PDF Reader**
-- 🔄 **PDF Creator**
 - 🔄 **PDF Editor**
 - 🔄 **Annotations**
 - 🔄 **File Management**

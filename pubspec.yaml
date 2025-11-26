@@ -40,7 +40,22 @@ dependencies:
   http: ^1.6.0
   shared_preferences: ^2.2.3
   lottie: ^3.1.2
-
+  syncfusion_flutter_pdfviewer: ^31.2.12
+  syncfusion_flutter_pdf: ^31.2.12
+  pdf: ^3.10.8
+  printing: ^5.11.1
+  image_picker: ^1.0.7
+  path_provider: ^2.1.5
+  file_picker: ^8.1.4
+  reorderable_grid_view: ^2.2.8
+  image_cropper: ^11.0.0
+  permission_handler: ^11.3.1
+  cunning_document_scanner: ^1.2.3
+  share_plus: ^7.2.2
+  archive: ^4.0.7
+  syncfusion_flutter_signaturepad: ^31.2.15
+  package_info_plus: ^9.0.0
+  url_launcher: ^6.3.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
